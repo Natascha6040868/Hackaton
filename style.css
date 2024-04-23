@@ -185,9 +185,9 @@ nav .profile-details i {
   margin-bottom: 26px;
 }
 .overview-boxes .box {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   width: calc(100% / 4 - 15px);
   background: #fff;
   padding: 15px 14px;
