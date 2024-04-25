@@ -67,28 +67,12 @@
                         <h3> Dashboard</h3> 
                     </section> 
   
-                    <section class="option2 nav-option"> 
-                        <img src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
-                            class="nav-img" 
-                            alt="articles"> 
-                        <h3> Articles</h3> 
-                    </section> 
-  
                     <section class="nav-option option3"> 
                         <img src= 
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
                             class="nav-img" 
                             alt="report"> 
                         <h3> Report</h3> 
-                    </section> 
-  
-                    <section class="nav-option option4"> 
-                        <img src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
-                            class="nav-img" 
-                            alt="institution"> 
-                        <h3> Institution</h3> 
                     </section> 
   
                     <section class="nav-option option5"> 
@@ -112,7 +96,7 @@
 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
                             class="nav-img" 
                             alt="logout"> 
-                        <h3>Logout</h3> 
+                        <a href="../loginStudent.php"><h3>Logout</h3></a> 
                     </section> 
   
                 </section> 

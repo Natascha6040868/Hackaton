@@ -6,7 +6,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if a file was uploaded without errors
     if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0) {
-        $target_dir = "\uploads"; // Change this to the desired directory for uploaded files
+        $target_dir = "./uploads/"; // Change this to the desired directory for uploaded files
         $target_file = $target_dir . basename($_FILES["file"]["name"]);
         $file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $filetype = $_FILES["file"]["type"];
 
                 // Database connection
-                $db_host = "localhost:3307";
+                $db_host = "localhost:3306";
                 $db_user = "root";
                 $db_pass = "";
                 $db_name = "fileuploaddownload";
