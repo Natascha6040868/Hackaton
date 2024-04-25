@@ -74,6 +74,7 @@
                             alt="report"> 
                         <h3> Report</h3> 
                     </section> 
+
   
                     <section class="nav-option option5"> 
                         <img src= 
