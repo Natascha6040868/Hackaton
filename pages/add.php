@@ -1,3 +1,25 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['user_id'])) {
+    $username = $_SESSION['full_name'];
+
+    // Fetch profile picture
+    require 'db_connection.php';
+    $stmt = $pdo->prepare("SELECT profile_picture FROM users WHERE id = ?");
+    $stmt->execute([$_SESSION['user_id']]);
+    $user = $stmt->fetch();
+    $profile_picture = $user['profile_picture'];
+   
+} else {
+    $username = 'Sign-up';
+    $profile_picture = '../img/user.jpg'; // Default image for non-logged-in users
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +29,7 @@
   <link rel="stylesheet" href="../css/add.css">
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Redwan Abate">
 </head>
 <body>
     <div class="sidebar">
@@ -60,9 +83,9 @@
                 <i class="bx bx-search"></i>
             </div> -->
             <div class="profile-details">
-                <img src="../img/user.jpg" alt="" />
-                <a href="account.php" class="admin_name"><i class="ri-account-circle-fill"></i><?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}else{echo "Account";} ?></a>
-                <i class="bx bx-chevron-down"></i>
+              <img src="<?php echo htmlspecialchars($profile_picture); ?>" alt="User Profile Picture" class="profile-picture">
+              <a href="profile.php" class="admin_name"><i class="ri-account-circle-fill"></i><?php echo htmlspecialchars($username); ?></a>
+              <i class="bx bx-chevron-right"></i>
             </div>
         </nav>
 
