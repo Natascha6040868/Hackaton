@@ -101,7 +101,7 @@ if (isset($_SESSION['user_id'])) {
                           </div>
                           <div class="col-md-8">
                               <div class="card-body">
-                                  <h5 class="card-title">Gementee Leiden</h5>
+                                  <h5 class="card-title">Gemeente Leiden</h5>
                                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis malesuada finibus maximus.</p>
                                   <a href="projects.php?organization=Gementee Leiden" class="btn btn-primary">View Projects</a>
                               </div>
@@ -120,7 +120,7 @@ if (isset($_SESSION['user_id'])) {
                           </div>
                           <div class="col-md-8">
                               <div class="card-body">
-                                  <h5 class="card-title">Gementee Gouda</h5>
+                                  <h5 class="card-title">Gemeente Gouda</h5>
                                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis malesuada finibus maximus.</p>
                                   <a href="projects.php?organization=Gementee Gouda" class="btn btn-primary">View Projects</a>
                               </div>
